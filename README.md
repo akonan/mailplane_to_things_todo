@@ -9,7 +9,7 @@ This Alfred extension creates todo in Things from current open email in Mailplan
 
 This assumes that you have already installed Alfred.
 
-1. Download the latest release from the [Downloads page](/downloads)
+1. Download the latest release from the [Downloads page](https://github.com/akonan/mailplane_to_things_todo/downloads)
 2. Double click the downloaded file
 
 # Usage
