@@ -1,6 +1,6 @@
 # Mailplane to Things ToDo Changelog
 
-## v1.0.0 [2012-08-29]
+## v1.0.1 [2012-08-29]
 
 * Fixes link creation
 
