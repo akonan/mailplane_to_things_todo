@@ -11,7 +11,7 @@
   <key>command</key>
   <string>
     tell application "Mailplane 3"
-      set emailLink to currentURL
+      set emailLink to "[url=" & currentURL & "]" & currentTitle & "[/url]"
       set emailSubject to currentTitle
       tell application "Things"
         set newToDo to make new to do with properties {name:emailSubject, notes:emailLink}
