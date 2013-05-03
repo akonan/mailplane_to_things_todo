@@ -9,7 +9,7 @@ This Alfred extension creates todo in Things from current open email in Mailplan
 
 This assumes that you have already installed Alfred.
 
-1. Download the latest release from the [Downloads page]("/downloads")
+1. Download the latest release from the [here]("https://dl.dropboxusercontent.com/u/1198219/add-email-to-things-v1.1.0.alfredworkflow")
 2. Double click the downloaded file
 
 # Usage
@@ -19,6 +19,6 @@ This assumes that you have already installed Alfred.
 
 # License and copyright
 
-MIT License. Copyright (C) 2012 by Antti Akonniemi
+MIT License. Copyright (C) 2012-2013 by Antti Akonniemi
 
 See the LICENSE file for details.
