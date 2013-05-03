@@ -2,16 +2,41 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-  <key>action</key>
-  <false/>
-  <key>background</key>
-  <true/>
-  <key>category</key>
-  <string>APPLESCRIPTS</string>
-  <key>command</key>
-  <string>
-    tell application "Mailplane 3"
-      set emailLink to currentURL
+	<key>bundleid</key>
+	<string></string>
+	<key>connections</key>
+	<dict>
+		<key>264A09D9-DE34-403A-9524-C67F6525811D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>7686C74A-A33F-49C2-8231-40F1569A481A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>7686C74A-A33F-49C2-8231-40F1569A481A</key>
+		<array/>
+	</dict>
+	<key>createdby</key>
+	<string>Antti Akonniemi</string>
+	<key>description</key>
+	<string>Adds selected email from Mailplane to Things and archives the email</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Add email to Things</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+  tell application "Mailplane 3"
+      set emailLink to "[url=" &amp; currentURL &amp; "]" &amp; currentTitle &amp; "[/url]"
       set emailSubject to currentTitle
       tell application "Things"
         set newToDo to make new to do with properties {name:emailSubject, notes:emailLink}
@@ -22,16 +47,51 @@
         keystroke "i"
       end tell
     end tell
-  </string>
-  <key>disabled</key>
-  <false/>
-  <key>keyword</key>
-  <string>Add email to Things</string>
-  <key>parameter</key>
-  <integer>0</integer>
-  <key>subtitle</key>
-  <string>Adds email to things and archives it</string>
-  <key>title</key>
-  <string>Add email to things</string>
+end alfred_script</string>
+				<key>cachescript</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>7686C74A-A33F-49C2-8231-40F1569A481A</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>add email to things</string>
+				<key>subtext</key>
+				<string>Adds email to things and archives it</string>
+				<key>text</key>
+				<string>Add email to Things</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>264A09D9-DE34-403A-9524-C67F6525811D</string>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>264A09D9-DE34-403A-9524-C67F6525811D</key>
+		<dict>
+			<key>ypos</key>
+			<real>60</real>
+		</dict>
+		<key>7686C74A-A33F-49C2-8231-40F1569A481A</key>
+		<dict>
+			<key>ypos</key>
+			<real>60</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>http://www.github.com/akonan</string>
 </dict>
 </plist>
